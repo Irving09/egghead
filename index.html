@@ -3,11 +3,14 @@
 <html>
     <head>
         <title>Egghead Excercises</title>
-    </head>
-    <body>
-
         <script src='node_modules/systemjs/dist/system.js'></script>
         <script src='node_modules/angular2/bundles/angular2.min.js'></script>
         <script src='lib/config.js'></script>
+    </head>
+    <body>
+        <app>Loading...</app>
+        <script>
+            System.import('app/bootstrap');
+        </script>
     </body>
 </html>
