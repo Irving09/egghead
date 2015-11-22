@@ -1,0 +1,7 @@
+<input type='text' #log-me/>
+
+<button on-click="onClick($event, logMe.value)">Log Input</button>
+
+<div *ng-for="#todo of todoService.todos">
+    {{todo}}
+</div>
