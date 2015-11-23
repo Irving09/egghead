@@ -1,7 +1,8 @@
-<input type='text' #log-me/>
-
-<button on-click="onClick($event, logMe.value)">Log Input</button>
+<form (ng-submit)="onSubmit()">
+    <input type='text' [(ng-model)]="todoModel.title"/>
+</form>
 
 <div *ng-for="#todo of todoService.todos">
-    {{todo}}
+    <span [hidden]="todo.status === 'completed'">{{todo.title}}</span>
+    <button on-click='todo.toggle()'>toggle</button>
 </div>

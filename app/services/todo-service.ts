@@ -1,12 +1,14 @@
+import { TodoModel } from '../models/todo-model';
+
 export class TodoService {
-    todos: string[] = [
-        'eat',
-        'sleep',
-        'code'
+    todos: TodoModel[] = [
+        new TodoModel('eat'),
+        new TodoModel('sleep'),
+        new TodoModel('code')
     ];
 
-    addTodo(value: string) {
-        if (value.length > 0) {
+    addTodo(value: TodoModel) {
+        if (value.title.length > 0) {
             this.todos.push(value);
         }
     }
